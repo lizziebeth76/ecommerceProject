@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head th:replace="fragments/fragments :: head">
+<!--    ADDS BOOTRAP LINK -??-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+<body>
+<div th:replace="fragments/fragments :: navbar" ></div>
+
+<main role="main">
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+        <div class="container">
+            <h1 class="display-3">Hattie Louise's Store of Great Goods</h1>
+            <p>This is a small e-commerce application that allows the user to purchase some of the great goods we offer! </p>
+            <p><a class="btn btn-primary btn-lg" href="/about" role="button">Learn more &raquo;</a></p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+<!--            REMOVES THYMELEAF TEMPLATES - ??-->
+<!--            <div class="card col-md-3 small-product-card"  th:each="product:${products}">-->
+<!--                <a  th:href="@{/product/{id}(id=${product.getId()})}"><img th:alt="${product.name}" th:src="@{${product.image}}" class="card-img"/></a>-->
+<!--                <div class="card-body">-->
+<!--                    <div class="card-title">-->
+<!--                        <h4 th:text="${product.name}"></h4>-->
+<!--                        <small th:text="${product.getBrand()}"></small>-->
+<!--                    </div>-->
+<!--            ADDS BOOSTRAP CARDS: -->
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Laptop</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Shiny, portable computing device</h6>
+                    <p class="card-text">This fruit-themed computing device will impress your friends, co-workers, and strangers who see you carrying it everywhere you go. People will know you either have a lot of money to spare, or that you have no money left after making such an extravagant, if worthwhile purchase!</p>
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Desktop</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Less portable computing device</h6>
+                    <p class="card-text">This computing device will keep you chained to your desk, a productive slave to the internet.</p>
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Older iPhone</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">It's an iphone8.</h6>
+                    <p class="card-text">It doesn't do as much as the newest iPhone, but it does a lot more than that iPhone6 you've been hanging on to!</p>
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Newest iPhone</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">IPhoneX</h6>
+                    <p class="card-text">It's the newest! It's the shiniest! It's extremely portable, and does ALL of the things! And it's <em>slightly</em> less expensive than the laptop we have for sale.</p>
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer th:replace="fragments/fragments :: footer"></footer>
+</body>
+</html>
+
